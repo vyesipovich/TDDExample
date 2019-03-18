@@ -5,7 +5,7 @@ There are two projects to demonstrate differences between Test Last and TDD appr
 Tech spec is following:
 
 1) We need circus artist which should have ability to juggle. Juggle means throw object in the air and catch it.
-2) We need ability to give circus artis requsite to juggle
+2) We need ability to give circus artist requsite to juggle
 3) Circus artist need ability to juggle apple.
 4) Circus artist need ability to juggle tape.
 5) If artist has more than one apple, juggle means throw all apples in the air and catch them all.
