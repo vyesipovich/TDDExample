@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using System;
+using Moq;
 using Moq.Sequences;
 using NUnit.Framework;
 
@@ -94,6 +95,20 @@ namespace TDDExample
                 Assert.AreEqual(result, true);
                 Assert.AreEqual(artist.Apples, applesToJuggle);
             }
+        }
+
+        [Test]
+        public void When_CircusArtist_Try_Juggle_More_Apples_That_he_Has_Throws_InvalidOperationException()
+        {
+            var handsService = new Mock<IHandsService>();
+
+            handsService.Setup(x => x.ThrowAppleInAir()).Returns(true);
+            handsService.Setup(x => x.CatchApple()).Returns(true);
+
+            var artist = new CircusArtist(handsService.Object);
+            artist.GiveApples(1);
+
+            Assert.Throws<InvalidOperationException>(() => artist.JuggleApples(3));
         }
     }
 }
