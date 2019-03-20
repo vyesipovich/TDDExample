@@ -14,51 +14,5 @@ namespace TestLastExample
         {
             hands = new Hands();
         }
-
-        private void ThrowTapeInAir()
-        {
-            hands.ThrowTapeInAir();
-            HasTape = false;
-            Console.WriteLine("I thrown tape in the air!");
-        }
-
-        private void CatchTape()
-        {
-            hands.CatchTape();
-            HasTape = true;
-            Console.WriteLine("I caught tape!");
-        }
-
-        private void ThrowAppleInAir()
-        {
-            hands.ThrowAppleInAir();
-            Apples--;
-            Console.WriteLine("I thrown apple in the air!");
-        }
-
-        private void CatchApple()
-        {
-            hands.CatchApple();
-            Apples++;
-            Console.WriteLine("I caught apple!");
-        }
-
-        public bool JuggleApple()
-        {
-            CatchApple();
-            ThrowAppleInAir();
-
-            Console.WriteLine("Tadaaam!");
-            return true;
-        }
-
-        public bool JuggleTape()
-        {
-            ThrowAppleInAir();
-            CatchTape();
-
-            Console.WriteLine("Tadaaam!");
-            return true;
-        }
     }
 }

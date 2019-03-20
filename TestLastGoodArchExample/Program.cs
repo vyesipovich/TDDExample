@@ -8,8 +8,6 @@ namespace TestLastGoodArchExample
         {
             var artist = new CircusArtist(new HandsService());
 
-            artist.GiveApples(3);
-            artist.JuggleApples(3);
             Console.ReadLine();
         }
     }
