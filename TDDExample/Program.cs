@@ -8,8 +8,8 @@ namespace TDDExample
         {
             var artist = new CircusArtist(new HandsService());
 
-            artist.GiveApples(7);
-            artist.JuggleApples(5);
+            artist.GiveApple();
+            artist.JuggleApple();
 
             artist.GiveTape();
             artist.JuggleTape();

@@ -55,43 +55,11 @@ namespace TestLastGoodArchExample
             Console.WriteLine("I caught tape!");
         }
 
-        /// <summary>
-        /// Will be removed after we added method for juggling many apples.
-        /// </summary>
-        /// <returns></returns>
-        public bool JuggleApple()
-        {
-            ThrowAppleInAir();
-            CatchApple();
-
-            Console.WriteLine("Tadaaam!");
-            return true;
-        }
-
         public bool JuggleApples(int applesToJuggle)
         {
             if (Apples < applesToJuggle) throw new InvalidOperationException("I haven't enough apples to juggle");
 
-            for (var i = 0; i < applesToJuggle; i++)
-            {
-                ThrowAppleInAir();
-            }
-
-            for (var i = 0; i < applesToJuggle; i++)
-            {
-                CatchApple();
-            }
-
-            Console.WriteLine("Tadaaam!");
-            return true;
-        }
-
-
-        public bool JuggleTape()
-        {
-            ThrowTapeInAir();
-            CatchTape();
-
+            
             Console.WriteLine("Tadaaam!");
             return true;
         }

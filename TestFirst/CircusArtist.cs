@@ -17,11 +17,7 @@ namespace TestFirstExample
 
         private void ThrowAppleInAir()
         {
-            if (Apples <= 0) throw new InvalidOperationException("Give me apples first!");
-
-            handsService.ThrowAppleInAir();
-            Apples--;
-            Console.WriteLine("I thrown apple in the air!");
+            throw new NotImplementedException();
         }
 
         public void GiveApples(int apples)
@@ -36,64 +32,33 @@ namespace TestFirstExample
 
         private void CatchApple()
         {
-            handsService.CatchApple();
-            Apples++;
-            Console.WriteLine("I caught apple!");
+            throw new NotImplementedException();
         }
 
         private void ThrowTapeInAir()
         {
-            handsService.ThrowTapeInAir();
-            HasTape = false;
-            Console.WriteLine("I thrown tape in the air!");
+            throw new NotImplementedException();
         }
 
         private void CatchTape()
         {
-            handsService.CatchTape();
-            HasTape = true;
-            Console.WriteLine("I caught tape!");
+            throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Will be removed after we added method for juggling many apples.
-        /// </summary>
-        /// <returns></returns>
         public bool JuggleApple()
         {
-            ThrowAppleInAir();
-            CatchApple();
-
-            Console.WriteLine("Tadaaam!");
-            return true;
+            throw new NotImplementedException();
         }
 
         public bool JuggleApples(int applesToJuggle)
         {
-            if (Apples < applesToJuggle) throw new InvalidOperationException("I haven't enough apples to juggle");
-
-            for (var i = 0; i < applesToJuggle; i++)
-            {
-                ThrowAppleInAir();
-            }
-
-            for (var i = 0; i < applesToJuggle; i++)
-            {
-                CatchApple();
-            }
-
-            Console.WriteLine("Tadaaam!");
-            return true;
+            throw new NotImplementedException();
         }
 
 
         public bool JuggleTape()
         {
-            ThrowTapeInAir();
-            CatchTape();
-
-            Console.WriteLine("Tadaaam!");
-            return true;
+            throw new NotImplementedException();
         }
     }
 }

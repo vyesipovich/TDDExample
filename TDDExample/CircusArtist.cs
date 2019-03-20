@@ -24,9 +24,9 @@ namespace TDDExample
             Console.WriteLine("I thrown apple in the air!");
         }
 
-        public void GiveApples(int apples)
+        public void GiveApple()
         {
-            this.Apples = apples;
+            this.Apples = 1;
         }
 
         public void GiveTape()
@@ -55,10 +55,6 @@ namespace TDDExample
             Console.WriteLine("I caught tape!");
         }
 
-        /// <summary>
-        /// Will be removed after we added method for juggling many apples.
-        /// </summary>
-        /// <returns></returns>
         public bool JuggleApple()
         {
             ThrowAppleInAir();
@@ -67,25 +63,6 @@ namespace TDDExample
             Console.WriteLine("Tadaaam!");
             return true;
         }
-
-        public bool JuggleApples(int applesToJuggle)
-        {
-            if (Apples < applesToJuggle) throw new InvalidOperationException("I haven't enough apples to juggle");
-
-            for (var i = 0; i < applesToJuggle; i++)
-            {
-                ThrowAppleInAir();
-            }
-
-            for (var i = 0; i < applesToJuggle; i++)
-            {
-                CatchApple();
-            }
-
-            Console.WriteLine("Tadaaam!");
-            return true;
-        }
-
 
         public bool JuggleTape()
         {
